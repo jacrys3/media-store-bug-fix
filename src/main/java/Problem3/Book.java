@@ -19,6 +19,12 @@ public abstract class Book implements StoreMediaOperations {
         this.author = anotherBook.author;
     }
 
+    public void setTitle(String title){
+        this.title = title;
+    }
+    public void setAuthor(String author){
+        this.author = author;
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj == this) {
@@ -37,11 +43,11 @@ public abstract class Book implements StoreMediaOperations {
         // The bug is caught when
         //  1. newly add tests fail while all old tests still pass
         //  2. remove the bug and use the fix below, all tests pass
-        return id.equals(theOtherBook.id) &&
+        /*return id.equals(theOtherBook.id) &&
                 author.equals(theOtherBook.author) &&
-                title.equals(theOtherBook.title);
+                title.equals(theOtherBook.title);*/
 
         // fix is here
-        // return id.equals(theOtherBook.id);
+         return id.equals(theOtherBook.id);
     }
 }
