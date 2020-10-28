@@ -6,7 +6,11 @@ import static org.junit.Assert.*;
 public class Problem3Test {
     @Test
     public void catchTheBugInBook() {
-        // quiz
+        BookFiction b1;
+        b1 = new BookFiction("t1", "a1", "g1");
+        Book b2 = new BookFiction(b1);
+        assertTrue(b1.equals(b2));
+
     }
 
     @Test
